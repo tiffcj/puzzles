@@ -1,0 +1,100 @@
+/*body
+{
+	background-color:darkgrey;
+	margin: 0px;
+	padding: 0px;
+}*/
+
+div.vieworder
+{
+	background-color:#362f3f;
+	color:white;
+	/*padding:1%;*/
+	border:0.2em solid #78798d;
+	width:100%;
+	text-align:center;
+	font-size:100%;
+	font-family:Helvetica, sans-serif;
+}
+
+div.vieworder button
+{
+	background-color:white;
+	color:#1f6038;
+	padding: 2%;
+	border: 0.08em solid black;
+	font-size: 100%;
+}
+
+div.orderitem
+{
+	background-color:#78798d;
+	color:black;
+	padding: 1%;
+	border: 0.2em solid black;
+	margin:auto;
+	margin-bottom:5%;
+	max-width:80%;
+	height:40%;
+	line-height:0.5em;
+	display:none;
+}
+div.orderitem img
+{
+	margin: 0 auto;
+	margin-top: 3%;
+	width:20%;
+}
+div.orderitem p
+{
+	clear:left;
+}
+.leftbuttons
+{
+	float:left;
+	clear:left;
+	padding:2%;
+	border:0.08em solid black;
+	margin-left:7%;
+	margin-top: 2%;
+	width: 2em;
+}
+.rightbuttons
+{
+	float:right;
+	margin-right:5%;
+	margin-top: 2%;
+	width:7em;
+}
+
+div.edit
+{
+	display:none;
+	background-color:#362f3f;
+	color:white;
+	padding:1%;
+	border:0.2em solid #78798d;
+	margin:auto;
+	text-align:center;
+	font-size:100%;
+	font-family:Helvetica, sans-serif;
+	line-height:0.5em;
+	overflow:auto;
+	width: 30em;
+	/*position:absolute;
+	left: 50%;
+    transform: translateX(-50%);*/
+}
+div.edit button
+{
+	background-color:white;
+	color:#1f6038;
+	padding: 2%;
+	border: 0.08em solid black;
+	margin-top: 3%;
+	font-size: 100%;
+}
+div.edit img
+{
+	width:40%;
+}

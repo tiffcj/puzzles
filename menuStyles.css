@@ -1,0 +1,401 @@
+body {
+	background-color: black;
+	font-family: Helvetica;
+	font-color: white;
+}
+
+#wrapperMenu {
+	position: relative;
+	margin: 0 auto;
+	background-color: #362f3f;
+	width:55em;
+	height: 35em;
+	display: none;
+}
+
+#wrapperHome {
+	position: relative;
+	margin: 0 auto;
+	background-color: white;
+	width:55em;
+	display: block;
+}
+
+#headerMenu {
+	height: 25%;
+	width: 40%;
+}
+
+#categories_column {
+	height: 75%;
+	width: 20%;
+	float: left;
+}
+
+.menuTitle {
+	height: 4em;
+	width: 100%;
+	color: white;
+}
+
+div.menuTitle h1{
+	margin: 0;
+	padding: 15% 0 0 25%;
+}
+
+#burgers, #fingerFoods, #poutines, #desserts {
+	display: none;
+}
+
+#beers, #wines, #cocktails, #nonAlc {
+	display: none;
+}
+
+#empty {
+	display: block;
+}
+
+#foodSubCats, #drinkSubCats {
+	display: none;
+}
+
+#foodArrow, #drinkArrow {
+	display: none;
+}
+
+#burgerArrow, #fingerArrow, #poutineArrow, #dessertArrow {
+	display: none;
+}
+
+#beerArrow, #wineArrow, #cocktailArrow, #nonArrow {
+	display: none;
+}
+
+.category {
+	width: 100%;
+	height: 2.5em;
+	padding: 0;
+	margin: 0;
+}
+
+.category img {
+	width: 2em;
+	height: 2em;
+	float: right;
+	display: block;
+}
+
+.category:hover {
+	background-color: #15675e;
+	color: white;
+}
+
+.category:active {
+	background-color: #0d3f3a;
+	color: white;
+}
+
+.subcategory {
+	width: 100%;
+	height: 2.5em;
+	padding: 0;
+	margin: 0;
+}
+
+.subcategory img {
+	width: 2em;
+	height: 2em;
+	float: right;
+	display: block;
+}
+
+.subcategory:hover {
+	background-color: #15675e;
+	color: white;
+}
+
+.subcategory:active {
+	background-color: #0d3f3a;
+	color: white;
+}
+
+div.category h2 {
+	margin: 0;
+	padding: 5% 0 5% 25%;
+	display: inline;
+}
+
+.one {
+	background-color: #1c8c80;
+	color: white;
+}
+
+.two {
+	background-color: #362f3f;
+	color: white;
+}
+
+.separator {
+	clear: both;
+	width: 100%;
+	text-align: center;
+}
+
+.subcategories_column {
+	height: 75%;
+	width: 23%;
+	float: left;
+	border-left: 1px #1c8c80 solid;
+}
+
+.subcatTitle {
+	height: 4em;
+	width: 100%;
+	text-align: bottom;
+	color: white;
+}
+
+.subcatTitle h2 {
+	margin: 0;
+	padding:1.4em 0 0 .3em;
+}
+
+.subcategory h2 {
+	margin: 0em;
+	padding: 5% 0 5% 3%;
+	display: inline;
+}
+
+.items_section {
+	height: 28em;
+	width: 31.79em;
+	background-color: #78798d;
+	overflow: auto;
+}
+
+.itemsTitle {
+	width: 100%;
+	height: 11%;
+	float: right;
+	background-color: #78798d;
+	color: white;
+}
+
+.itemsTitle h2 {
+	margin: 0;
+	padding: 5% 0 0 2%;
+}
+
+.item {
+	width: 13em;
+	height: 16em;
+	margin: .5em .5em .5em 1em;
+	float: left;
+	text-align: center;
+}
+
+.item img {
+	width: 100%;
+	height: 10em;
+	margin: 0;
+	padding: 0;
+}
+
+.label {
+	width: 100%;
+	min-height: 20%;
+	text-align: center;
+	line-height: 1em;
+	background-color: white;
+}
+
+.label p {
+	padding: 1em;
+	margin: 0;
+}
+
+
+.add {
+	width: 1em;
+	height: 0.8em;
+	float: left;
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 0.7em;
+	color: #62cfa6;
+}
+
+.add:hover {
+	color: white;
+}
+
+.add:active {
+	color: #362f3f;
+}
+
+.add p{
+	margin: 0;
+	padding: 0;
+}
+
+.price {
+	width: 60%;
+	height: 1em;
+	float: right;
+	text-align: right;
+	font-size: 2em;
+	line-height: 1em;
+	padding-right: 0.2em;
+}
+
+.price p {
+	padding: 0;
+	margin: 0;
+}
+
+.foodItems {
+	width:57.8%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#cancel_order {
+	position: absolute;
+	width: 25%;
+	height: 9%;
+	bottom: 0;
+	left: 0;
+	background-color: #a2db74;
+	text-align: center;
+	color: #362f3f;
+}
+
+#view_order {
+	position: absolute;
+	width: 25%;
+	height: 9%;
+	bottom: 0;
+	right: 0;
+	background-color: #a2db74;
+	text-align: center;
+	color: #362f3f;
+}
+
+#view_order:hover, #cancel_order:hover {
+	background-color: #1f6038;
+	color: white;
+}
+
+#view_order:active, #cancel_order:active {
+	background-color: #78798d;
+	color: white;
+}
+
+
+#view_order p {
+	margin-top: 0.5em;
+	margin-bottom: 0.1em;
+}
+
+#view_order img {
+	position: absolute;
+	right:0;
+	bottom:0;
+	width: 25%;
+}
+
+::-webkit-scrollbar {
+      width: 15px;
+}
+
+::-webkit-scrollbar-track {
+      background-color: #1c8c80;
+} 
+ 
+::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); 
+    	border: 3px solid transparent;
+    	border-radius: 9px;
+    	background-clip: content-box;
+}
+ 
+::-webkit-scrollbar-button {
+      background-color: #78798d;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,04);
+}
+
+/*
+ *modal from w3schools with some modifications
+ */
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 2em; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 35em;
+    max-height: 32em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: #362f3f;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #78798d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-footer {
+    background-color: #a2db74;
+    color: #362f3f;
+    height: 2.5em;
+    clear: both;
+    float: right;
+    width: 100%;
+
+}

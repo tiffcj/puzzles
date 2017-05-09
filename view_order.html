@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Puzzles Pub - Your Order</title>
+	<link rel="stylesheet" type="text/css" href="view_order_style.css"/>
+	<script src="order.js"></script>
+</head>
+
+<body>
+	<div class="vieworder">
+		<h2>Your Order</h2>
+
+		<div class="orderitem" id="cheeseburger">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('cheeseburger')">+</button>
+			<button class="rightbuttons" type="button" onclick="editItem('cheeseburger')">Customize</button>
+			<div class="leftbuttons" id="cheeseburgerQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('cheeseburger', 'Cheeseburger')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('cheeseburger')">-</button>
+			<img src="./pictures/food/burgers/cheeseburger.jpg">
+			<p>Cheeseburger</p>
+			<div id="cheeseburgerPrice"></div>
+		</div>
+		<div class="orderitem" id="chickenBurger">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('chickenBurger')">+</button>
+			<div class="leftbuttons" id="chickenBurgerQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('chickenBurger', 'Crispy Chicken Burger')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('chickenBurger')">-</button>
+			<img src="./pictures/food/burgers/chickenBurger.jpg">
+			<p>Crispy Chicken Burger</p>
+			<div id="chickenBurgerPrice"></div>
+		</div>
+		<div class="orderitem" id="baconOnionBurger">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('baconOnionBurger')">+</button>
+			<div class="leftbuttons" id="baconOnionBurgerQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('baconOnionBurger', 'Bacon Crispy Onion Burger')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('baconOnionBurger')">-</button>
+			<img src="./pictures/food/burgers/bacon_crispyOnion_burger.jpg">
+			<p>Bacon Crispy Onion Burger</p>
+			<div id="baconOnionBurgerPrice"></div>
+		</div>
+
+		<div class="orderitem" id="buffaloChickenNachos">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('buffaloChickenNachos')">+</button>
+			<div class="leftbuttons" id="buffaloChickenNachosQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('buffaloChickenNachos', 'Buffalo Chicken Nachos')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('buffaloChickenNachos')">-</button>
+			<img src="./pictures/food/finger_food/Buffalo-Chicken-Nachos.jpg">
+			<p>Buffalo Chicken Nachos</p>
+			<div id="buffaloChickenNachosPrice"></div>
+		</div>
+		<div class="orderitem" id="chickenStrips">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('chickenStrips')">+</button>
+			<div class="leftbuttons" id="chickenStripsQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('chickenStrips', 'Chicken Strips')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('chickenStrips')">-</button>
+			<img src="./pictures/food/finger_food/chickenStrips.jpg">
+			<p>Chicken Stripsr</p>
+			<div id="chickenStripsPrice"></div>
+		</div>
+		<div class="orderitem" id="chiptoleHoneyChicken">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('chiptoleHoneyChicken')">+</button>
+			<div class="leftbuttons" id="chiptoleHoneyChickenQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('chiptoleHoneyChicken', 'Chipotle Honey Chicken Bites')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('chiptoleHoneyChicken')">-</button>
+			<img src="./pictures/food/finger_food/chipotleHoneyChicken.jpg">
+			<p>Chipotle Honey Chicken Bites</p>
+			<div id="chiptoleHoneyChickenPrice"></div>
+		</div>
+		<div class="orderitem" id="tacoCups">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('tacoCups')">+</button>
+			<div class="leftbuttons" id="tacoCupsQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('tacoCups', 'Taco Cups')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('tacoCups')">-</button>
+			<img src="./pictures/food/finger_food/tacoCups.jpg">
+			<p>Taco Cups</p>
+			<div id="tacoCupsPrice"></div>
+		</div>
+
+		<div class="orderitem" id="butterChickenPoutine">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('butterChickenPoutine')">+</button>
+			<div class="leftbuttons" id="butterChickenPoutineQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('butterChickenPoutine', 'Butter Chicken Poutine')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('butterChickenPoutine')">-</button>
+			<img src="./pictures/food/poutine/butterChicken_poutine.jpg">
+			<p>Butter Chicken Poutine</p>
+			<div id="butterChickenPoutinePrice"></div>
+		</div>
+		<div class="orderitem" id="loadedPoutine">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('loadedPoutine')">+</button>
+			<div class="leftbuttons" id="loadedPoutineQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('loadedPoutine', 'Loaded Poutine')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('loadedPoutine')">-</button>
+			<img src="./pictures/food/poutine/loaded_poutine.jpg">
+			<p>Loaded Poutine</p>
+			<div id="loadedPoutinePrice"></div>
+		</div>
+		<div class="orderitem" id="regularPoutine">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('regularPoutine')">+</button>
+			<div class="leftbuttons" id="regularPoutineQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('regularPoutine', 'Regular Poutine')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('regularPoutine')">-</button>
+			<img src="./pictures/food/poutine/regular_poutine.jpg">
+			<p>Regular Poutine</p>
+			<div id="regularPoutinePrice"></div>
+		</div>
+
+		<div class="orderitem" id="brownieExplosion">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('brownieExplosion')">+</button>
+			<div class="leftbuttons" id="brownieExplosionQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('brownieExplosion', 'Brownie Explosion')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('brownieExplosion')">-</button>
+			<img src="./pictures/food/dessert/brownieExplosion.jpg">
+			<p>Brownie Explosion</p>
+			<div id="brownieExplosionPrice"></div>
+		</div>
+		<div class="orderitem" id="cherryCheesecake">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('cherryCheesecake')">+</button>
+			<div class="leftbuttons" id="cherryCheesecakeQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('cherryCheesecake', 'Cherry Cheesecake')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('cherryCheesecake')">-</button>
+			<img src="./pictures/food/dessert/cherryCheesecake.jpeg">
+			<p>Cherry Cheesecake</p>
+			<div id="cherryCheesecakePrice"></div>
+		</div>
+		<div class="orderitem" id="chocolateTorte">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('chocolateTorte')">+</button>
+			<div class="leftbuttons" id="chocolateTorteQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('chocolateTorte', 'Chocolate Hazelnut Torte')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('chocolateTorte')">-</button>
+			<img src="./pictures/food/dessert/chocolateTorte.jpg">
+			<p>Chocolate Hazelnut Torte</p>
+			<div id="chocolateTortePrice"></div>
+		</div>
+		<div class="orderitem" id="panCookie">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('panCookie')">+</button>
+			<div class="leftbuttons" id="panCookieQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('panCookie', 'Pan Cookie')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('panCookie')">-</button>
+			<img src="./pictures/food/dessert/panCookie.jpg">
+			<p>Pan Cookie</p>
+			<div id="panCookiePrice"></div>
+		</div>
+
+		<div class="orderitem" id="corona">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('corona')">+</button>
+			<div class="leftbuttons" id="coronaQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('corona', 'Cerveza Corona')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('corona')">-</button>
+			<img src="./pictures/Beers/cerveza_corona.jpg">
+			<p>Cerveza Corona</p>
+			<div id="coronaPrice"></div>
+		</div>
+		<div class="orderitem" id="guiness">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('guiness')">+</button>
+			<div class="leftbuttons" id="guinessQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('guiness', 'Guiness Foreign - Extra Strong - Stout')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('guiness')">-</button>
+			<img src="./pictures/Beers/Guinness-Foreign-Extra-Stout-500x500.jpg">
+			<p>Guiness Foreign - Extra Strong - Stout</p>
+			<div id="guinessPrice"></div>
+		</div>
+		<div class="orderitem" id="budweiser">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('budweiser')">+</button>
+			<div class="leftbuttons" id="budweiserQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('budweiser', 'Budweiser')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('budweiser')">-</button>
+			<img src="./pictures/Beers/late-night-beer-delivery-budweiser-beer.jpg">
+			<p>Budweiser</p>
+			<div id="budweiserPrice"></div>
+		</div>
+		<div class="orderitem" id="sapporo">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('sapporo')">+</button>
+			<div class="leftbuttons" id="sapporoQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('sapporo', 'Sapporo')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('sapporo')">-</button>
+			<img src="./pictures/Beers/sapporo330-500x500.jpg">
+			<p>Sapporo</p>
+			<div id="sapporoPrice"></div>
+		</div>
+
+		<div class="orderitem" id="sauvignon">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('sauvignon')">+</button>
+			<div class="leftbuttons" id="sauvignonQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('sauvignon', 'Cape Point Sauvignon Blanc')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('sauvignon')">-</button>
+			<img src="./pictures/Wines/cape_point_sauvignon_blanc.jpg">
+			<p>Cape Point Sauvignon Blanc</p>
+			<div id="sauvignonPrice"></div>
+		</div>
+		<div class="orderitem" id="pinotGrigio">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('pinotGrigio')">+</button>
+			<div class="leftbuttons" id="pinotGrigioQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('pinotGrigio', 'Cavit Pinot Grigio')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('pinotGrigio')">-</button>
+			<img src="./pictures/Wines/cavitpinotgrigio__81264__65915.1358534427.1280.1280.jpg">
+			<p>Cavit Pinot Grigio</p>
+			<div id="pinotGrigioPrice"></div>
+		</div>
+		<div class="orderitem" id="pinotNoir">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('pinotNoir')">+</button>
+			<div class="leftbuttons" id="pinotNoirQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('pinotNoir', 'Jadot Pinot Noir')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('pinotNoir')">-</button>
+			<img src="./pictures/Wines/Jadot_Pinot_Noir__72276.1425074642.1280.1280.jpg">
+			<p>Jadot Pinot Noir</p>
+			<div id="pinotNoirPrice"></div>
+		</div>
+
+		<div class="orderitem" id="martini">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('martini')">+</button>
+			<div class="leftbuttons" id="martiniQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('martini', 'Vodka Martini')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('martini')">-</button>
+			<img src="./pictures/cocktails/1510p71-vodka-martini.jpg">
+			<p>Vodka Martini</p>
+			<div id="martiniPrice"></div>
+		</div>
+		<div class="orderitem" id="whiskey">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('whiskey')">+</button>
+			<div class="leftbuttons" id="whiskeyQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('whiskey', 'Whiskey')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('whiskey')">-</button>
+			<img src="./pictures/cocktails/5599297_1GG.jpg">
+			<p>Whiskey</p>
+			<div id="whiskeyPrice"></div>
+		</div>
+		<div class="orderitem" id="mojito">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('mojito')">+</button>
+			<div class="leftbuttons" id="mojitoQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('mojito', 'Belvedere Lemon Tea Mojito')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('mojito')">-</button>
+			<img src="./pictures/cocktails/belvedere-lemon-tea-mojito.jpg">
+			<p>Belvedere Lemon Tea Mojito</p>
+			<div id="mojitoPrice"></div>
+		</div>
+		<div class="orderitem" id="vodka">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('vodka')">+</button>
+			<div class="leftbuttons" id="vodkaQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('vodka', 'Vodka')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('vodka')">-</button>
+			<img src="./pictures/cocktails/finlandia750new__23194__84996.1358534053.1280.1280.jpg">
+			<p>Vodka</p>
+			<div id="vodkaPrice"></div>
+		</div>
+
+		<div class="orderitem" id="coke">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('coke')">+</button>
+			<div class="leftbuttons" id="cokeQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('coke', 'Coke')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('coke')">-</button>
+			<img src="./pictures/nonalc-cold/coke.jpg">
+			<p>Coke</p>
+			<div id="cokePrice"></div>
+		</div>
+		<div class="orderitem" id="gingerAle">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('gingerAle')">+</button>
+			<div class="leftbuttons" id="gingerAleQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('gingerAle', 'Ginger Ale')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('gingerAle')">-</button>
+			<img src="./pictures/nonalc-cold/gingerale.jpg">
+			<p>Ginger Ale</p>
+			<div id="gingerAlePrice"></div>
+		</div>
+		<div class="orderitem" id="orangeJuice">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('orangeJuice')">+</button>
+			<div class="leftbuttons" id="orangeJuiceQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('orangeJuice', 'Orange Juice')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('orangeJuice')">-</button>
+			<img src="./pictures/nonalc-cold/orangejuice.jpg">
+			<p>Orange Juice</p>
+			<div id="orangeJuicePrice"></div>
+		</div>
+
+		<div class="orderitem" id="cappuccino">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('cappuccino')">+</button>
+			<div class="leftbuttons" id="cappuccinoQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('cappuccino', 'Cappuccino')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('cappuccino')">-</button>
+			<img src="./pictures/nonalc-hot/cappuccino.jpg">
+			<p>Cappuccino</p>
+			<div id="cappuccinoPrice"></div>
+		</div>
+		<div class="orderitem" id="hotChocolate">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('hotChocolate')">+</button>
+			<div class="leftbuttons" id="hotChocolateQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('hotChocolate', 'Hot Chocolate')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('hotChocolate')">-</button>
+			<img src="./pictures/nonalc-hot/hotchocolate.jpg">
+			<p>Hot Chocolate</p>
+			<div id="hotChocolatePrice"></div>
+		</div>
+		<div class="orderitem" id="tea">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('tea')">+</button>
+			<div class="leftbuttons" id="teaQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('tea', 'Tea')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('tea')">-</button>
+			<img src="./pictures/nonalc-hot/tea.jpg">
+			<p>Tea</p>
+			<div id="teaPrice"></div>
+		</div>
+
+		<div class="orderitem" id="beerBurgerSpecial">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('beerBurgerSpecial')">+</button>
+			<button class="rightbuttons" type="button" onclick="editItem('cheeseburger')">Customize</button>
+			<div class="leftbuttons" id="beerBurgerSpecialQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('beerBurgerSpecial', 'Beer & Burger for $11')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('beerBurgerSpecial')">-</button>
+			<img src="http://im.whatshot.in/event/2015/Oct/1444645737-beernburger.jpg?w=500" alt="Beer & Burger for $11">
+			<p>Beer &amp; Burger $11</p>
+			<div id="beerBurgerSpecialPrice"></div>
+		</div>
+		<div class="orderitem" id="burgerFriesSpecial">
+			<button class="leftbuttons" type="button" onclick="increaseQuantity('burgerFriesSpecial')">+</button>
+			<div class="leftbuttons" id="burgerFriesSpecialQuantity"></div>
+			<button class="rightbuttons" type="button" onclick="deleteFromOrder('burgerFriesSpecial', 'Burger & Fries for $9')">Delete</button>
+			<button class="leftbuttons" type="button" onclick="decreaseQuantity('burgerFriesSpecial')">-</button>
+			<img src="http://www.restaurantmagazine.com/wp-content/uploads/2015/08/Applebees-All-Day-Brunch-Burger.jpg" alt="Burger & Fries for $9">
+			<p>Burger &amp; Fries $9</p>
+			<div id="burgerFriesSpecialPrice"></div>
+		</div>
+
+		<button id="checkout" type="button" onclick="checkout()">Checkout &rarr;</button>
+		<div id="cost2">Total: $0</div>
+	</div>
+
+	<div class="edit">
+		<img src="./pictures/food/burgers/cheeseburger.jpg" alt="Cheeseburger">
+		<p>Cheeseburger</p>
+		<br>
+		<p>Options:</p>
+		<form action="" method="get">
+			<input type="checkbox" checked = "true">Tomato<br>
+			<input type="checkbox" checked = "true">Lettuce<br>
+			<input type="checkbox" checked = "true">Onions<br>
+			<input type="checkbox" checked = "true">Pickles<br>
+			<input type="checkbox" checked = "true">Ketchup<br>
+			<input type="checkbox" checked = "true">Mustard<br>
+			<input type="checkbox" checked = "true">Cheese<br>
+		</form>
+		<button type="button" onclick="backToOrder()">Done</button>
+	</div>
+</body>
+</html>
